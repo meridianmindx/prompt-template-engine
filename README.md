@@ -14,6 +14,14 @@ A curated collection of high-quality LLM prompt templates for common use cases:
 pip install prompt_templates
 ```
 
+Or from source:
+
+```bash
+git clone https://github.com/Leafon26/multi-agent-builder.git
+cd multi-agent-builder/prompt_templates
+pip install -e .
+```
+
 ## Usage
 
 ```python
@@ -34,8 +42,20 @@ result = generate(template["template"], name="John", topic="AI")
 
 ## Template Categories
 
-- `cold_outreach` - Cold email and LinkedIn templates
-- `content_generation` - Blog and newsletter templates
-- `sales_copywriting` - Sales email and landing page copy
-- `technical_docs` - API docs and release notes
-- `social_media` - Twitter/LinkedIn/Reddit posts
+| Category | Templates | Description |
+|---|---|---|
+| `cold_outreach` | 5 | Cold email and LinkedIn outreach |
+| `content_generation` | 5 | Blog and newsletter templates |
+| `sales_copywriting` | 3 | Sales email and landing page copy |
+| `technical_docs` | 3 | API docs and release notes |
+| `social_media` | 5 | Twitter/LinkedIn/Reddit posts |
+
+Each template supports Python `string.Template` formatting with `**kwargs`.
+
+## Contributing
+
+We welcome contributions! Just open a PR with your template.
+
+## License
+
+MIT License. See [LICENSE](LICENSE) file for details.
