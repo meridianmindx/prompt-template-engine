@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="prompt_templates",
-    version="1.0.0",
+    version="1.1.0",
     packages=["prompt_templates"],
     description="A curated collection of high-quality LLM prompt templates",
     long_description=open("README.md").read(),
