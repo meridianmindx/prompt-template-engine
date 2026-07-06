@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Template Engine for Developers</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a; color: #e0e0e0; min-height: 100vh;
+        }
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            padding: 120px 40px 80px; text-align: center;
+        }
+        .hero h1 {
+            font-size: 3.5em; font-weight: 800;
+            background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+        .hero p { font-size: 1.3em; color: #a0b4c8; max-width: 700px; margin: 0 auto 30px; }
+        .cta-buttons { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+        .btn {
+            display: inline-block; padding: 14px 32px; border-radius: 8px;
+            font-size: 1.1em; font-weight: 600; text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn-primary {
+            background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+            color: #fff; box-shadow: 0 4px 20px rgba(0,210,255,0.3);
+        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 30px rgba(0,210,255,0.5); }
+        .btn-secondary {
+            background: rgba(255,255,255,0.08); color: #00d2ff;
+            border: 1px solid rgba(0,210,255,0.3);
+        }
+        .btn-secondary:hover { background: rgba(0,210,255,0.1); }
+        .features { padding: 60px 40px; max-width: 1100px; margin: 0 auto; }
+        .features h2 { text-align: center; font-size: 2em; margin-bottom: 40px; color: #00d2ff; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+        .feature-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 12px; padding: 30px;
+        }
+        .feature-card h3 { color: #00d2ff; margin-bottom: 10px; font-size: 1.2em; }
+        .feature-card p { color: #8a9baa; line-height: 1.6; }
+        .code-section {
+            background: rgba(0,210,255,0.03); border-top: 1px solid rgba(255,255,255,0.06);
+            padding: 60px 40px; max-width: 900px; margin: 0 auto;
+        }
+        .code-section h2 { text-align: center; font-size: 2em; margin-bottom: 20px; color: #00d2ff; }
+        .code-section p { text-align: center; color: #8a9baa; margin-bottom: 30px; }
+        pre {
+            background: #0d1117; border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 8px; padding: 20px; overflow-x: auto;
+        }
+        pre code { color: #c9d1d9; font-size: 0.95em; }
+        footer {
+            text-align: center; padding: 40px; color: #5a6a7a; font-size: 0.9em;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <h1>Prompt Template Engine</h1>
+        <p>A curated collection of high-quality LLM prompt templates for common use cases. Build AI-powered applications faster with ready-to-use templates.</p>
+        <div class="cta-buttons">
+            <a href="https://pypi.org/project/prompt_templates/" class="btn btn-primary">Install on PyPI</a>
+            <a href="https://github.com/meridianmindx/prompt-template-engine" class="btn btn-secondary">View Source</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <h2>Why Use It?</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>Ready-to-Use Templates</h3>
+                <p>100+ handcrafted templates for cold outreach, content generation, sales copywriting, and more.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Zero Boilerplate</h3>
+                <p>Just pip install, import, and go. No complex setup or configuration needed.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Flexible API</h3>
+                <p>Simple Python API for fetching, filtering, and rendering templates in your projects.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Battle-Tested</h3>
+                <p>Used in production across multiple AI applications and workflows.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="code-section">
+        <h2>Quick Start</h2>
+        <p>Get started in seconds:</p>
+        <pre><code># Install
+pip install prompt_templates
+
+# Use it
+from prompt_templates import get_templates, get_template, generate
+
+# Get all templates
+templates = get_templates()
+
+# Generate a cold email
+result = generate(get_template("cold_outreach"), name="John", topic="AI")</code></pre>
+    </section>
+
+    <footer>
+        <p>Prompt Template Engine for Developers &mdash; Open Source &amp; Free</p>
+    </footer>
+</body>
+</html>
