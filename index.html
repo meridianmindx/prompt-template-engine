@@ -3,201 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prompt Template Engine - Build Better LLM Prompts</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000' width='100' height='100'%3E%3Ctext y='90' font-size='80'%3E⚡%3C/text%3E%3C/svg%3E">
+    <title>Prompt Templates — Curated LLM Prompt Templates for Developers</title>
+    <meta name="description" content="A curated collection of high-quality LLM prompt templates. Cold outreach, content generation, sales copywriting, and more.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a1a; line-height: 1.6; }
+        .container { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 60px 0; text-align: center; }
+        header h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 16px; }
+        header p { font-size: 1.25rem; opacity: 0.95; max-width: 600px; margin: 0 auto 24px; }
+        .btn { display: inline-block; padding: 12px 32px; border-radius: 8px; font-size: 1rem; font-weight: 600; text-decoration: none; transition: transform 0.2s; }
+        .btn-primary { background: white; color: #667eea; }
+        .btn-primary:hover { transform: translateY(-2px); }
+        .btn-secondary { background: rgba(255,255,255,0.15); color: white; border: 1px solid rgba(255,255,255,0.3); }
+        .btn-secondary:hover { background: rgba(255,255,255,0.25); }
+        section { padding: 60px 0; }
+        h2 { font-size: 1.8rem; text-align: center; margin-bottom: 40px; }
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+        .feature { background: #f8f9fa; border-radius: 12px; padding: 28px; text-align: center; }
+        .feature h3 { margin-bottom: 8px; color: #333; }
+        .feature p { color: #666; font-size: 0.95rem; }
+        .code-block { background: #1e1e2e; color: #cdd6f4; padding: 20px; border-radius: 10px; overflow-x: auto; font-size: 0.95rem; }
+        .code-block code { font-family: 'Fira Code', 'Cascadia Code', monospace; }
+        .pricing { background: #f8f9fa; }
+        .pricing-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 700px; margin: 0 auto; }
+        .pricing-card { background: white; border-radius: 12px; padding: 32px 24px; text-align: center; border: 2px solid #e2e8f0; }
+        .pricing-card.featured { border-color: #667eea; position: relative; }
+        .pricing-card.featured::before { content: "POPular"; background: #667eea; color: white; font-size: 0.7rem; padding: 2px 8px; border-radius: 4px; font-weight: 700; }
+        .pricing-card h3 { font-size: 1.2rem; color: #333; }
+        .price { font-size: 2.5rem; font-weight: 700; color: #667eea; margin: 12px 0; }
+        .price small { font-size: 1rem; font-weight: 400; }
+        .pricing-card ul { list-style: none; margin: 16px 0; text-align: left; }
+        .pricing-card ul li { padding: 4px 0; color: #555; }
+        .pricing-card ul li::before { content: "✓"; color: #667eea; font-weight: 700; margin-right: 8px; }
+        .btn-buy { display: block; margin-top: 16px; padding: 10px 20px; background: #667eea; color: white; border-radius: 6px; text-decoration: none; font-weight: 600; transition: background 0.2s; }
+        .btn-buy:hover { background: #5a6fd6; }
+        .cta { background: #1e1e2e; color: white; text-align: center; }
+        .cta h2 { color: white; }
+        .cta p { margin-bottom: 24px; opacity: 0.9; }
+        footer { background: #f8f9fa; padding: 30px 0; text-align: center; color: #888; font-size: 0.9rem; }
+        footer a { color: #667eea; text-decoration: none; }
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8rem; }
+            header p { font-size: 1rem; }
+            section { padding: 40px 0; }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">Prompt Template Engine</div>
-            <nav>
-                <a href="#features">Features</a>
-                <a href="#examples">Examples</a>
-                <a href="#install">Install</a>
-                <a href="#docs">Docs</a>
-            </nav>
+
+<header>
+    <div class="container">
+        <h1>Prompt Templates</h1>
+        <p>A curated collection of high-quality LLM prompt templates for cold outreach, content generation, sales copywriting, and more.</p>
+        <div>
+            <a href="https://github.com/meridianmindx/prompt-template-engine" target="_blank" class="btn btn-primary">View on GitHub</a>
         </div>
-    </header>
+    </div>
+</header>
 
-    <main>
-        <section class="hero">
-            <h1>Better LLM Prompts, Every Time</h1>
-            <p class="hero-subtitle">A Python library for building, validating, and rendering prompt templates with confidence.</p>
-            <div class="hero-actions">
-                <a href="#install" class="btn btn-primary">Get Started</a>
-                <a href="https://github.com/meridianmindx/prompt-template-engine" class="btn btn-secondary">View on GitHub</a>
+<section class="container">
+    <h2>Why Use Prompt Templates?</h2>
+    <div class="features">
+        <div class="feature">
+            <h3>Ready to Use</h3>
+            <p>Professionally crafted templates for cold emails, content generation, sales copywriting, and social media posts.</p>
+        </div>
+        <div class="feature">
+            <h3>Easy Integration</h3>
+            <p>Just pip install and import. No complex setup — start generating templates in seconds.</p>
+        </div>
+        <div class="feature">
+            <h3>Versatile Categories</h3>
+            <p>Cold outreach, content generation, sales copywriting, technical docs, and social media templates.</p>
+        </div>
+    </div>
+</section>
+
+<section style="background:#f8f9fa;">
+    <div class="container">
+        <h2>Installation</h2>
+        <div class="code-block">
+            <code>pip install prompt_templates</code>
+        </div>
+        <div class="code-block" style="margin-top:16px;">
+            <code>
+from prompt_templates import get_templates, get_template, generate&lt;br&gt;&lt;br&gt;
+templates = get_templates()&lt;br&gt;
+template = get_template("cold_outreach", "cold_email_template")&lt;br&gt;
+result = generate(template["template"], name="John", topic="AI")
+            </code>
+        </div>
+    </div>
+</section>
+
+<section class="pricing">
+    <div class="container">
+        <h2>Get Started</h2>
+        <div class="pricing-cards">
+            <div class="pricing-card featured">
+                <h3>Free Edition</h3>
+                <div class="price">Free<small>/forever</small></div>
+                <ul>
+                    <li>All cold outreach templates</li>
+                    <li>Content generation templates</li>
+                    <li>Sales copywriting templates</li>
+                    <li>GitHub access &amp; source code</li>
+                    <li>Community support</li>
+                </ul>
+                <a href="https://github.com/meridianmindx/prompt-template-engine" class="btn-buy" target="_blank">Get on GitHub</a>
             </div>
-            <div class="hero-meta">
-                <span>MIT License</span>
-                <span>Python 3.8+</span>
-                <span>Zero Dependencies</span>
-            </div>
-        </section>
-
-        <section id="features" class="section">
-            <h2>Why use Prompt Template Engine?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <h3>Validated Variables</h3>
-                    <p>Ensure every template variable meets your constraints — min/max length, regex patterns, choice lists, or custom validators.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Safe Rendering</h3>
-                    <p>No more f-strings or format() — templates are rendered with explicit variable substitution only. No code execution, no surprises.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Reusable Templates</h3>
-                    <p>Define named templates with optional guard conditions. Register, retrieve, and render with one line of code.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Structured Output</h3>
-                    <p>Templates can validate output against JSON schemas, regex patterns, or choice lists. Get guaranteed well-formed output.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Zero Dependencies</h3>
-                    <p>Pure Python stdlib only. No pip install headaches, no version conflicts, no build steps required.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Test-Ready</h3>
-                    <p>Templates are deterministic given valid inputs. Easy to test, easy to mock, easy to integrate.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="examples" class="section section-alt">
-            <h2>Examples</h2>
-
-            <h3>Basic Template (no guards)</h3>
-            <pre><code>from prompt_templates import TemplateEngine
-
-engine = TemplateEngine()
-
-engine.add_template("greeting",
-    "Hello, {name}! Welcome to {place}."
-)
-
-result = engine.render("greeting", {
-    "name": "Alice",
-    "place": "Wonderland"
-})
-# Result: "Hello, Alice! Welcome to Wonderland."
-</code></pre>
-
-            <h3>Template with Guards</h3>
-            <pre><code>from prompt_templates import TemplateEngine, GuardCondition
-
-engine = TemplateEngine()
-
-engine.add_template("code_gen",
-    "Write {type} code for {task}. "
-    "Output must be valid {output_type} JSON.",
-    guards={
-        "type": GuardCondition(name="type",
-            choices=["Python", "TypeScript", "Rust"]),
-        "task": GuardCondition(name="task",
-            min_length=10, max_length=500),
-        "output_type": GuardCondition(name="output_type",
-            choices=["String", "Integer", "Boolean"])
-    }
-)
-
-result = engine.render("code_gen", {
-    "type": "Python",
-    "task": "Build a REST API with FastAPI",
-    "output_type": "String"
-})
-</code></pre>
-
-            <h3>Guard Conditions</h3>
-            <pre><code>from prompt_templates import GuardCondition
-
-# String length constraints
-GuardCondition(name="name", min_length=2, max_length=50)
-
-# Regex pattern
-GuardCondition(name="email", regex=r"^[^@]+@[^@]+\.[^@]+$")
-
-# Choice list
-GuardCondition(name="tone", choices=["formal", "casual", "technical"])
-
-# Custom validator
-GuardCondition(name="age", validator=lambda x: int(x) > 0)
-</code></pre>
-        </section>
-
-        <section id="install" class="section">
-            <h2>Installation</h2>
-            <pre><code># Install from PyPI
-pip install prompt-templates
-
-# Or clone and install locally
-git clone https://github.com/meridianmindx/prompt-template-engine.git
-cd prompt-template-engine
-pip install -e .</code></pre>
-
-            <h2>Quick Start</h2>
-            <pre><code>from prompt_templates import TemplateEngine
-
-# Create engine
-engine = TemplateEngine()
-
-# Add a template
-engine.add_template("review",
-    "Write a {tone} review of {product}."
-)
-
-# Render with variables
-result = engine.render("review", {
-    "tone": "professional",
-    "product": "AI assistant"
-})
-</code></pre>
-        </section>
-
-        <section id="docs" class="section section-alt">
-            <h2>Documentation</h2>
-            <div class="docs-grid">
-                <div class="doc-card">
-                    <h3>API Reference</h3>
-                    <p>Full API docs with examples. Learn about TemplateEngine, TemplateTemplate, and GuardCondition classes.</p>
-                    <a href="https://github.com/meridianmindx/prompt-template-engine/blob/main/README.md" class="doc-link">Read README →</a>
-                </div>
-                <div class="doc-card">
-                    <h3>Tutorials</h3>
-                    <p>Step-by-step guides for common use cases: email templates, code generation, data extraction.</p>
-                    <a href="#examples" class="doc-link">See Examples →</a>
-                </div>
-                <div class="doc-card">
-                    <h3>PyPI</h3>
-                    <p>Install from PyPI: pip install prompt-templates</p>
-                    <a href="https://pypi.org/project/prompt-templates/" class="doc-link">View on PyPI →</a>
-                </div>
-                <div class="doc-card">
-                    <h3>GitHub</h3>
-                    <p>Full source code, issues, and discussions at GitHub.</p>
-                    <a href="https://github.com/meridianmindx/prompt-template-engine" class="doc-link">View Source →</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>Get Started Today</h2>
-            <div class="cta-box">
-                <p>Prompt Template Engine makes your LLM prompts more reliable, testable, and maintainable.</p>
-                <a href="#install" class="btn btn-primary">Install Now</a>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>© 2026 MeridianMindX. Licensed under MIT.</p>
-            <div class="links">
-                <a href="https://github.com/meridianmindx/prompt-template-engine" target="_blank">GitHub</a>
-                <a href="https://pypi.org/project/prompt-templates/" target="_blank">PyPI</a>
+            <div class="pricing-card">
+                <h3>Premium Bundle</h3>
+                <div class="price">$19<small>/one-time</small></div>
+                <ul>
+                    <li>Everything in Free</li>
+                    <li>Social media templates</li>
+                    <li>Technical docs templates</li>
+                    <li>Early access to new templates</li>
+                    <li>Priority email support</li>
+                </ul>
+                <a href="https://payhip.com/b/YOUR_LINK" class="btn-buy" target="_blank">Buy Premium</a>
             </div>
         </div>
-    </footer>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <h2>Start Creating Better Prompts</h2>
+        <p>Join developers who ship higher-quality prompts every day.</p>
+        <a href="https://github.com/meridianmindx/prompt-template-engine" class="btn btn-primary" target="_blank">Get Started Free</a>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>Built by <a href="https://github.com/meridianmindx" target="_blank">Meridian Mind</a> — MIT License</p>
+        <p style="margin-top:8px;"><a href="https://github.com/meridianmindx/prompt-template-engine" target="_blank">GitHub Repository</a></p>
+    </div>
+</footer>
+
 </body>
 </html>
