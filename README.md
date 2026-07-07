@@ -8,6 +8,10 @@ A curated collection of high-quality LLM prompt templates for common use cases:
 - Technical documentation
 - Social media posts
 
+[Visit the website](https://meridianmindx.github.io/prompt-template-engine/)
+
+<!-- Live demo and project overview: https://meridianmindx.github.io/prompt-template-engine/ -->
+
 ## Installation
 
 ```bash
