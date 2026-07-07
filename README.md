@@ -1,45 +1,54 @@
-# Prompt Templates
+# Prompt Template Engine
 
-A curated collection of high-quality LLM prompt templates for common use cases:
+> **Production-ready LLM prompt templates** — copy, customize, and ship in seconds.
 
-- Cold outreach emails
-- Content generation
-- Sales copywriting
-- Technical documentation
-- Social media posts
+A curated collection of high-quality LLM prompt templates for common use cases, packaged for immediate use.
 
-[Visit the website](https://meridianmindx.github.io/prompt-template-engine/)
+| Feature | Detail |
+|---|---|
+| **What** | 20+ curated templates across 5 categories |
+| **Use cases** | Cold outreach, content, sales copy, docs, social media |
+| **API** | `get_templates()`, `get_template()`, `generate()` |
+| **Install** | `pip install prompt_templates` |
+| **License** | MIT — free for commercial use |
 
-<!-- Live demo and project overview: https://meridianmindx.github.io/prompt-template-engine/ -->
-
-## Installation
-
-```bash
-pip install prompt_templates
-```
-
-## Usage
+## Quick Start
 
 ```python
 from prompt_templates import get_templates, get_template, generate
 
-# Get all templates
+# All templates
 templates = get_templates()
 
-# Get templates by category
-cold_templates = get_templates("cold_outreach")
+# By category
+cold = get_templates("cold_outreach")
 
-# Get a specific template
-template = get_template("cold_outreach", "cold_email_template")
-
-# Generate with template
+# Generate output
 result = generate(template["template"], name="John", topic="AI")
 ```
 
 ## Template Categories
 
-- `cold_outreach` - Cold email and LinkedIn templates
-- `content_generation` - Blog and newsletter templates
-- `sales_copywriting` - Sales email and landing page copy
-- `technical_docs` - API docs and release notes
-- `social_media` - Twitter/LinkedIn/Reddit posts
+| Category | Templates |
+|---|---|
+| Cold Outreach | Cold email, LinkedIn, follow-up |
+| Content Generation | Blog posts, newsletters, social media |
+| Sales Copywriting | Sales emails, landing page copy |
+| Technical Docs | API docs, release notes, changelogs |
+| Social Media | Twitter/X, LinkedIn, Reddit posts |
+
+## License
+
+MIT — use freely for personal or commercial projects.
+
+## Links
+
+- [PyPI](https://pypi.org/project/prompt-templates/)
+- [Source Code](https://github.com/meridianmindx/prompt-template-engine)
+- [Template Library](https://meridianmindx.github.io/prompt-template-engine/)
+- [Hugging Face](https://huggingface.co/MeridianMindX)
+- [Medium Blog](https://medium.com/@meridianmindx)
+
+---
+
+*Built with ❤️ by [Meridian Mind](https://meridianmindx.github.io/)*
