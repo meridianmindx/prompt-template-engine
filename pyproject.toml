@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prompt_templates"
+version = "2.0.0"
+description = "A curated collection of high-quality LLM prompt templates"
+readme = "README.md"
+requires-python = ">=3.7"
+authors = [{name = "Meridian Mind"}]
+keywords = ["llm", "templates", "prompt"]
+
+[project.scripts]
+prompt-templates = "prompt_templates.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["prompt_templates*"]

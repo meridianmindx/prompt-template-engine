@@ -1,0 +1,2 @@
+[console_scripts]
+prompt-templates = prompt_templates.__main__:main
