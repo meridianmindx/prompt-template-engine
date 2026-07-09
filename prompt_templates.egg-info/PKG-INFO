@@ -1,49 +1,69 @@
-Metadata-Version: 2.1
-Name: prompt-templates
-Version: 1.0.0
+Metadata-Version: 2.4
+Name: prompt_templates
+Version: 0.3.0
 Summary: A curated collection of high-quality LLM prompt templates
 Author: Meridian Mind
+License: MIT
+Project-URL: Homepage, https://github.com/meridianmindx/prompt-template-engine
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
 Requires-Python: >=3.7
 Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: jinja2>=3.0.0
+Requires-Dist: click>=8.0.0
+Dynamic: license-file
+Dynamic: requires-python
 
-# Prompt Templates
+# Simple Python CLI Tool
 
-A curated collection of high-quality LLM prompt templates for common use cases:
+A lightweight command-line interface for basic text processing tasks.
 
-- Cold outreach emails
-- Content generation
-- Sales copywriting
-- Technical documentation
-- Social media posts
+## Features
+
+- **text-to-uppercase**: Convert text to uppercase
+- **word-count**: Count words in a string
+- **reverse-text**: Reverse the order of characters
+- **remove-vowels**: Remove all vowels from text
 
 ## Installation
 
 ```bash
-pip install prompt_templates
+pip install .
 ```
 
 ## Usage
 
-```python
-from prompt_templates import get_templates, get_template, generate
+```bash
+# Convert text to uppercase
+ptool uppercase "hello world"
 
-# Get all templates
-templates = get_templates()
+# Count words
+ptool count "this is a test"
 
-# Get templates by category
-cold_templates = get_templates("cold_outreach")
+# Reverse text
+ptool reverse "abcdef"
 
-# Get a specific template
-template = get_template("cold_outreach", "cold_email_template")
-
-# Generate with template
-result = generate(template["template"], name="John", topic="AI")
+# Remove vowels
+ptool remove-vowels "hello world"
 ```
 
-## Template Categories
+## Development
 
-- `cold_outreach` - Cold email and LinkedIn templates
-- `content_generation` - Blog and newsletter templates
-- `sales_copywriting` - Sales email and landing page copy
-- `technical_docs` - API docs and release notes
-- `social_media` - Twitter/LinkedIn/Reddit posts
+```bash
+pip install -e .
+```
+
+## Testing
+
+```bash
+python -m unittest tests/
+```

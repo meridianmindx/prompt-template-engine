@@ -1,4 +1,4 @@
-"""LLM Prompt Templates Library - curated collection for common use cases."""
+"""LLM Prompt Templates - curated collection for common use cases."""
 
 TEMPLATES = {
     "cold_outreach": [
@@ -98,49 +98,20 @@ TEMPLATES = {
     ]
 }
 
-
 def get_templates(category=None):
-    """Get templates, optionally filtered by category.
-    
-    Args:
-        category: Optional category filter (e.g., 'cold_outreach', 'content_generation')
-    
-    Returns:
-        List of template dictionaries or dict of templates by category
-    """
+    """Get all templates, optionally filtered by category."""
     if category:
         return TEMPLATES.get(category, [])
     return TEMPLATES
 
-
-def get_template(category, template_name):
-    """Get a specific template by category and name.
-    
-    Args:
-        category: The template category
-        template_name: The specific template name
-    
-    Returns:
-        Template dictionary or None
-    """
-    templates = TEMPLATES.get(category, [])
-    for template in templates:
-        if template["name"] == template_name:
-            return template
+def get_template(category, name):
+    """Get a specific template by category and name."""
+    templates = get_templates(category)
+    for t in templates:
+        if t["name"] == name:
+            return t
     return None
 
-
-def generate(template, **kwargs):
-    """Generate output by replacing {{vars}} in template with values.
-    
-    Args:
-        template: Template string with {{variable}} placeholders
-        **kwargs: Values to replace in template
-    
-    Returns:
-        Generated string with all replacements made
-    """
-    result = template
-    for key, value in kwargs.items():
-        result = result.replace("{{" + key + "}}", str(value))
-    return result
+def generate(template_string, **kwargs):
+    """Generate output from a template string using kwargs."""
+    return template_string.format(**kwargs)

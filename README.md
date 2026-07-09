@@ -1,54 +1,44 @@
-# Prompt Template Engine
+# Simple Python CLI Tool
 
-> **Production-ready LLM prompt templates** — copy, customize, and ship in seconds.
+A lightweight command-line interface for basic text processing tasks.
 
-A curated collection of high-quality LLM prompt templates for common use cases, packaged for immediate use.
+## Features
 
-| Feature | Detail |
-|---|---|
-| **What** | 20+ curated templates across 5 categories |
-| **Use cases** | Cold outreach, content, sales copy, docs, social media |
-| **API** | `get_templates()`, `get_template()`, `generate()` |
-| **Install** | `pip install prompt_templates` |
-| **License** | MIT — free for commercial use |
+- **text-to-uppercase**: Convert text to uppercase
+- **word-count**: Count words in a string
+- **reverse-text**: Reverse the order of characters
+- **remove-vowels**: Remove all vowels from text
 
-## Quick Start
+## Installation
 
-```python
-from prompt_templates import get_templates, get_template, generate
-
-# All templates
-templates = get_templates()
-
-# By category
-cold = get_templates("cold_outreach")
-
-# Generate output
-result = generate(template["template"], name="John", topic="AI")
+```bash
+pip install .
 ```
 
-## Template Categories
+## Usage
 
-| Category | Templates |
-|---|---|
-| Cold Outreach | Cold email, LinkedIn, follow-up |
-| Content Generation | Blog posts, newsletters, social media |
-| Sales Copywriting | Sales emails, landing page copy |
-| Technical Docs | API docs, release notes, changelogs |
-| Social Media | Twitter/X, LinkedIn, Reddit posts |
+```bash
+# Convert text to uppercase
+ptool uppercase "hello world"
 
-## License
+# Count words
+ptool count "this is a test"
 
-MIT — use freely for personal or commercial projects.
+# Reverse text
+ptool reverse "abcdef"
 
-## Links
+# Remove vowels
+ptool remove-vowels "hello world"
+```
 
-- [PyPI](https://pypi.org/project/prompt-templates/)
-- [Source Code](https://github.com/meridianmindx/prompt-template-engine)
-- [Template Library](https://meridianmindx.github.io/prompt-template-engine/)
-- [Hugging Face](https://huggingface.co/MeridianMindX)
-- [Medium Blog](https://medium.com/@meridianmindx)
+## Development
 
----
+```bash
+pip install -e .
+```
 
-*Built with ❤️ by [Meridian Mind](https://meridianmindx.github.io/)*
+## Testing
+
+```bash
+python -m unittest tests/
+```
